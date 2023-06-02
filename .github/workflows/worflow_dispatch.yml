@@ -1,0 +1,22 @@
+name: Workfloe call Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'username'
+        required: true
+        default: ${{ github.actor }}
+        type: string
+      environment:
+        description: 'environment'
+        required: true
+        type: environment
+jobs:
+  apply_worflow_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print in username
+        run: echo "🎉 The username to print i ${{ inputs.username }}"
+      - name: print in environment
+        run: echo "🎉 The environment to print i ${{ inputs.environment }}"
