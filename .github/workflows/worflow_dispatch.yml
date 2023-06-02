@@ -6,7 +6,7 @@ on:
       username:
         description: 'username'
         required: true
-        default: ${{ github.actor }}
+        default: 'diego'
         type: string
       environment:
         description: 'environment'
