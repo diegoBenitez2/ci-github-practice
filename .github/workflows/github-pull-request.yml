@@ -1,0 +1,12 @@
+name: Pull request Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+  pull_request:
+    types: [opened]
+    branches: [feat/my-first-ci]
+jobs:
+  DemoPR:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print in console linux serve
+        run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }}  event."
